@@ -8,6 +8,7 @@ const TaskItem = ({ task, onDelete, onUpdate }) => {
 
   const handleUpdate = () => {
     onUpdate({ ...task, completed: !task.completed });
+    console.log(task);
   };
 
   return (
@@ -22,6 +23,7 @@ const TaskItem = ({ task, onDelete, onUpdate }) => {
       <Button variant="danger" onClick={handleDelete}>
         Supprimer
       </Button>
+      
     </div>
   );
 };
